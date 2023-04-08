@@ -9,8 +9,6 @@ function Calc() {
 
   const selectOperator = { plus: "+", minus: "-", divide: "/", multi: "*" };
 
-  console.log("first", addNums);
-
   const handlePlus = () => {
     if (firstValue.length <= 0 && addNums.length !== 0) {
       const addValue = addNums.join("");
@@ -45,8 +43,6 @@ function Calc() {
     }
   };
 
-  console.log("second", firstValue);
-
   useEffect(() => {
     if (firstValue.length > 0) {
       const addValue = addNums.join("");
@@ -54,8 +50,6 @@ function Calc() {
       setSecondValue([...firstValue, parseInt(addValue)]);
     }
   }, [addNums, firstValue]);
-
-  console.log("third", secondValue);
 
   const handleEqualTo = () => {
     if (operator === "+") {
@@ -89,8 +83,6 @@ function Calc() {
     }
     setOperator("");
   };
-
-  console.log("oper", operator);
 
   const handleClear = () => {
     setTotal(0);
